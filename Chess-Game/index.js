@@ -662,22 +662,30 @@ function showInMoveList(){
         capture += "X";
             
     }
-    markup = "<tr><td>" + peiceName  + pos1 + capture + pos2 + "</td></tr>";
+    //markup = "<tr><td>" + peiceName  + pos1 + capture + pos2 + "</td></tr>";
+    
     if(player[currPlayer] === "w"){
         
         
-        tableBody = $("#player1 tbody");
-        tableBody.append(markup);
-        
+        // tableBody = $("#player1 tbody");
+        // tableBody.append(markup);
+        let uni1 =  "moveNumber";
+        uni1 += MoveNumber;
+        markup = "<div class = 'list' id = "+uni1+">"+
+                     "<div class = 'wb'>" + peiceName+pos1+capture+pos2 + "</div>" + 
+                 "</div>"    
+        $(".moves").append(markup);
 
     }else{
         
-        tableBody = $("#player2 tbody");
-        tableBody.append(markup);
-        
+        // tableBody = $("#player2 tbody");
+        // tableBody.append(markup);
+        markup = "<div class = 'wb'>" + peiceName+pos1+capture+pos2 + "</div>"
+        let uni1 = "moveNumber";
+        uni1 += MoveNumber;
+        $("#"+uni1).append(markup);
         MoveNumber++;
-    }    
-
+    }
 }
 function placePeice(){
     var peiceName = board[row1][col1].peice;
