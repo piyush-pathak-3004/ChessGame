@@ -16,6 +16,31 @@ h1{
     display: flex;
     flex-direction: row;
 }
+
+.moves{
+
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 2px gray solid;
+    
+}
+#playersName{
+    font-size: large;
+    font-weight: bold;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+/*     
+    justify-content: space-around; */
+    border: 1px gray solid;
+}
+.wb{
+    width: 150px;
+    justify-content: space-around;
+    border: 1px gray solid;
+}
 .MovesOrder{
     font-family: 'Lobster', cursive;
     
