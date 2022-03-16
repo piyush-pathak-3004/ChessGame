@@ -1,25 +1,29 @@
-h1{
-    margin: 30px;
-  font-family: 'Lobster', cursive;
-  text-shadow: 5px 0 #232931;
-  font-size: 5rem;
-  color: #4ECCA3;
-  text-align: center;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
+body{
+    /* background: linear-gradient(rgb(216, 111, 111), rgba(201, 66, 66, 0.753)); */
+}
+
 .game{
-    display: flex;
-    flex-direction: column ;
-    
-}
-.contents{
-    
+    margin: auto;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.table_box{
+    padding: 30px;
+    box-shadow: 5px 10px 10px rgb(187, 184, 184);
+    background-color: #ffff;
 }
 
 .moves{
-
-    width: 300px;
     display: flex;
     flex-direction: column;
     border: 2px gray solid;
@@ -28,25 +32,27 @@ h1{
 #playersName{
     font-size: large;
     font-weight: bold;
+    display: flex;
 }
 .list{
     display: flex;
     flex-direction: row;
-/*     
-    justify-content: space-around; */
     border: 1px gray solid;
 }
 .wb{
     width: 150px;
-    justify-content: space-around;
+    text-align: center;
     border: 1px gray solid;
+    font-size: 25px;
 }
-.MovesOrder{
-    font-family: 'Lobster', cursive;
-    
-    font-size: 2rem;
+
+.board{
+    display: flex;
+    flex-direction: column;
 }
+
 .chess-board {
+    font-size: 30px;
     margin: auto;
     vertical-align: middle;
 
@@ -71,15 +77,33 @@ h1{
     border: none; 
 }
 .chess-board td { 
-    width: 1.5em; height: 1.5em; text-align: center; font-size: 32px; line-height: 0;
+    width: 1.5em; height: 1.5em; text-align: center; font-size: 40px; line-height: 0;
 }
 .chess-board .light { 
-    background: #eee; 
+    background: #f0d9b5;
+    /* color: #b58863;  */
 }
 .chess-board .dark { 
-    background: gray; 
-}
+    background-color: #b58863;
+    /* color: #f0d9b5;*/
+} 
 .pressed{
     box-shadow: 0 0 30px green;
     background-color: green !important;
+}
+.StartAgain{
+    border: 3px solid greenyellow;
+    border-radius: 50%;
+    color: white;
+    background-color:green;
+    font-size: 130%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    width: max-content;
+
+}
+.StartAgain:hover{
+
+    background-color: red;
 }

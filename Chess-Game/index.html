@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,22 @@
     <title>ChessGame</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    
+
     <div class="game">
-        <h1>Lets Play a Game</h1>
-        <div class="contents">
-        <!-- 
-            <table class="MovesOrder" id="player1">
-                <tbody>
-                    <tr>
-                        <th>Player1</th>
-                        
-                    </tr>
-                </tbody>
-            </table>
-            
-            <table class="MovesOrder" id="player2">
-                <tbody>
-                    <tr>
-                        <th>Player2</th>
-                        
-                    </tr>
-                </tbody>
-            </table> -->
-            
-            <div class="moves">
 
-                <div class="list" id="playersName">
-                    <div class="wb">Player1</div>
-                    <div class="wb">Player2</div>
-                </div>
+        <div class="table_box">
+        <div class="moves">
 
-
-
-
+            <div class="list" id="playersName">
+                <div class="wb">Player1</div>
+                <div class="wb">Player2</div>
             </div>
-            
+
+        </div>
+    </div>
+        <div class="board">
             <table class="chess-board">
                 <tbody>
                     <tr>
@@ -59,100 +40,100 @@
                     <tr>
                         <th>8</th>
                         <td class="light" id="a8">♜</td>
-                        <td class="dark"  id="b8">♞</td>
+                        <td class="dark" id="b8">♞</td>
                         <td class="light" id="c8">♝</td>
-                        <td class="dark"  id="d8">♛</td>
+                        <td class="dark" id="d8">♛</td>
                         <td class="light" id="e8">♚</td>
-                        <td class="dark"  id="f8">♝</td>
+                        <td class="dark" id="f8">♝</td>
                         <td class="light" id="g8">♞</td>
-                        <td class="dark"  id="h8">♜</td>
+                        <td class="dark" id="h8">♜</td>
                     </tr>
                     <tr>
                         <th>7</th>
-                        <td class="dark"  id="a7">♟</td>
+                        <td class="dark" id="a7">♟</td>
                         <td class="light" id="b7">♟</td>
-                        <td class="dark"  id="c7">♟</td>
+                        <td class="dark" id="c7">♟</td>
                         <td class="light" id="d7">♟</td>
-                        <td class="dark"  id="e7">♟</td>
+                        <td class="dark" id="e7">♟</td>
                         <td class="light" id="f7">♟</td>
-                        <td class="dark"  id="g7">♟</td>
+                        <td class="dark" id="g7">♟</td>
                         <td class="light" id="h7">♟</td>
                     </tr>
                     <tr>
                         <th>6</th>
                         <td class="light" id="a6"></td>
-                        <td class="dark"  id="b6"></td>
+                        <td class="dark" id="b6"></td>
                         <td class="light" id="c6"></td>
-                        <td class="dark"  id="d6"></td>
+                        <td class="dark" id="d6"></td>
                         <td class="light" id="e6"></td>
-                        <td class="dark"  id="f6"></td>
+                        <td class="dark" id="f6"></td>
                         <td class="light" id="g6"></td>
-                        <td class="dark"  id="h6"></td>
+                        <td class="dark" id="h6"></td>
                     </tr>
                     <tr>
                         <th>5</th>
-                        <td class="dark"  id="a5"></td>
+                        <td class="dark" id="a5"></td>
                         <td class="light" id="b5"></td>
-                        <td class="dark"  id="c5"></td>
+                        <td class="dark" id="c5"></td>
                         <td class="light" id="d5"></td>
-                        <td class="dark"  id="e5"></td>
+                        <td class="dark" id="e5"></td>
                         <td class="light" id="f5"></td>
-                        <td class="dark"  id="g5"></td>
+                        <td class="dark" id="g5"></td>
                         <td class="light" id="h5"></td>
                     </tr>
                     <tr>
                         <th>4</th>
                         <td class="light" id="a4"></td>
-                        <td class="dark"  id="b4"></td>
+                        <td class="dark" id="b4"></td>
                         <td class="light" id="c4"></td>
-                        <td class="dark"  id="d4"></td>
+                        <td class="dark" id="d4"></td>
                         <td class="light" id="e4"></td>
-                        <td class="dark"  id="f4"></td>
+                        <td class="dark" id="f4"></td>
                         <td class="light" id="g4"></td>
-                        <td class="dark"  id="h4"></td>
+                        <td class="dark" id="h4"></td>
                     </tr>
                     <tr>
                         <th>3</th>
-                        <td class="dark"  id="a3"></td>
+                        <td class="dark" id="a3"></td>
                         <td class="light" id="b3"></td>
-                        <td class="dark"  id="c3"></td>
+                        <td class="dark" id="c3"></td>
                         <td class="light" id="d3"></td>
-                        <td class="dark"  id="e3"></td>
+                        <td class="dark" id="e3"></td>
                         <td class="light" id="f3"></td>
-                        <td class="dark"  id="g3"></td>
+                        <td class="dark" id="g3"></td>
                         <td class="light" id="h3"></td>
                     </tr>
                     <tr>
                         <th>2</th>
                         <td class="light" id="a2">♙</td>
-                        <td class="dark"  id="b2">♙</td>
+                        <td class="dark" id="b2">♙</td>
                         <td class="light" id="c2">♙</td>
-                        <td class="dark"  id="d2">♙</td>
+                        <td class="dark" id="d2">♙</td>
                         <td class="light" id="e2">♙</td>
-                        <td class="dark"  id="f2">♙</td>
+                        <td class="dark" id="f2">♙</td>
                         <td class="light" id="g2">♙</td>
-                        <td class="dark"  id="h2">♙</td>
+                        <td class="dark" id="h2">♙</td>
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td class="dark"  id="a1">♖</td>
+                        <td class="dark" id="a1">♖</td>
                         <td class="light" id="b1">♘</td>
-                        <td class="dark"  id="c1">♗</td>
+                        <td class="dark" id="c1">♗</td>
                         <td class="light" id="d1">♕</td>
-                        <td class="dark"  id="e1">♔</td>
+                        <td class="dark" id="e1">♔</td>
                         <td class="light" id="f1">♗</td>
-                        <td class="dark"  id="g1">♘</td>
+                        <td class="dark" id="g1">♘</td>
                         <td class="light" id="h1">♖</td>
                     </tr>
                 </tbody>
             </table>
-
-            <button class="StartAgain">Refresh</button>
+            <button class="StartAgain">Restart</button>
         </div>
-        
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="index.js"></script>
 
 </body>
+
 </html>
