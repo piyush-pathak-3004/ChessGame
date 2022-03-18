@@ -143,9 +143,17 @@ function setBoard(i,j){
     }
 
 }
+
+
+// if(checkmate()){
+//     alert(player[1-currPlayer] + " wins " );
+// }
+
+
 $(".StartAgain").on("click",function(e){
     window.location.reload(true);
 });
+
 $(".chess-board td").on("click",function(e){
     
     
@@ -218,11 +226,102 @@ $(".chess-board td").on("click",function(e){
             placePeice();
             
             currPlayer = 1-currPlayer;
+            if(checkmate()){
+                alert("game-ends");
+            }
         }
         isPeiceSelected = false;
     }
     
 })
+
+function checkmate(){
+    //console.log("hello");
+    var kX,kY;
+    for(var i = 0;i<8;i++){
+        for(var j = 0;j<8;j++){
+            if(board[i][j].color == player[currPlayer] && board[i][j].peice == "K"){
+                kX = i;
+                kY = j;
+                break;
+            }
+        }
+    }
+
+    
+    for(var i = 0;i<8;i++){
+        for(var j = 0;j<8;j++){
+            if(board[i][j].color == player[1-currPlayer]){
+                
+                if(isAttackingKing(board[i][j].peice,i,j,kX,kY,player[1-currPlayer],player[currPlayer])){
+                    
+                    row1 = kX;
+                    col1 = kY;
+                    
+
+                    if(kX+1<8 && isLeagalMove()){
+                        row2 = kX+1;
+                        col2 = kY;
+                        if(!isKingInCheck()){
+                            return false;
+                            
+                        }
+                    }if(kX-1 >=0 && isLeagalMove() ){
+                        row2 = kX-1;
+                        col2 = kY;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }if(kY+1<8 && isLeagalMove()){
+                        row2 = kX;
+                        col2 = kY+1;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }if(kY-1<=0 && isLeagalMove()){
+                        row2 = kX;
+                        col2 = kY-1;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }if(kX+1<8 && kY+1<8 && isLeagalMove()){
+                        row2 = kX+1;
+                        col2 = kY+1;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }if(kX+1<8 && kY-1>=0 && isLeagalMove()){
+                        row2 = kX+1;
+                        col2 = kY-1;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }if(kX-1>=0 && kY+1>=0 && isLeagalMove()){
+                        row2 = kX-1;
+                        col2 = kY+1;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }if(kX-1>=0 && kY-1>=0 && isLeagalMove()){
+                        row2 = kX-1;
+                        col2 = kY-1;
+                        if(!isKingInCheck()){
+                            return false;
+                        }
+                    }
+                    return true;
+
+                }
+            }
+        }
+    }
+    return false;
+
+    
+
+
+    
+}
 
 function ShowBlink(id){
     $("#" + id).addClass("pressed");
@@ -1206,6 +1305,7 @@ function isKingInCheck(){
 
 function isLeagalMove(){
     if(isKingInCheck()){
+
         return false;
     }
     if(row2 == row1 && col1 == col2)return false;
